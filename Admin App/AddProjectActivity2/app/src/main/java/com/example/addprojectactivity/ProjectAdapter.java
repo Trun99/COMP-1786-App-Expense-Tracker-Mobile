@@ -43,6 +43,7 @@ public class ProjectAdapter extends RecyclerView.Adapter<ProjectAdapter.PtyProje
         PtyHolder.PtyTvCode.setText("Code: " + PtyProject.getCode());
         PtyHolder.PtyTvStatus.setText("Status: " + PtyProject.getStatus());
         
+     // Display total $
         if (PtyDbHelper != null) {
             try {
                 double PtyTotal = PtyDbHelper.getTotalExpenses(PtyProject.getId());

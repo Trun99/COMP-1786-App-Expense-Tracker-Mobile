@@ -1,6 +1,5 @@
 using COMP1786MobileApp.Models;
 using COMP1786MobileApp.Services;
-using System.Linq;
 
 namespace COMP1786MobileApp
 {
@@ -8,6 +7,7 @@ namespace COMP1786MobileApp
     {
         private readonly FirebaseService _service = new FirebaseService();
         private readonly Project _project;
+        private bool _isNavigatingToExpenseDetails;
 
         public ProjectExpensesPage(Project project)
         {
@@ -30,15 +30,31 @@ namespace COMP1786MobileApp
             await Navigation.PushAsync(new AddExpensePage(_project));
         }
 
-        private async void OnExpenseSelected(object sender, SelectionChangedEventArgs e)
+        private async void OnExpenseTapped(object sender, TappedEventArgs e)
         {
-            if (e.CurrentSelection.FirstOrDefault() is not Expense ptySelectedExpense)
+            if (_isNavigatingToExpenseDetails)
             {
                 return;
             }
 
-            await Navigation.PushAsync(new ExpenseDetailsPage(ptySelectedExpense, _project.Name));
-            ((CollectionView)sender).SelectedItem = null;
+            if (e.Parameter is not Expense ptySelectedExpense)
+            {
+                return;
+            }
+
+            try
+            {
+                _isNavigatingToExpenseDetails = true;
+                await Navigation.PushAsync(new ExpenseDetailsPage(ptySelectedExpense, _project.Name));
+            }
+            catch (Exception ex)
+            {
+                await DisplayAlert("Error", $"Cannot open expense details: {ex.Message}", "OK");
+            }
+            finally
+            {
+                _isNavigatingToExpenseDetails = false;
+            }
         }
     }
 }

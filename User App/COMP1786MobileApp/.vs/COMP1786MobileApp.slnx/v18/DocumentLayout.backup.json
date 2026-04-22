@@ -1,49 +1,52 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\ngtht\\OneDrive\\Documents\\ExpenseTracker1786\\User App\\COMP1786MobileApp\\",
+  "WorkspaceRootPath": "C:\\Users\\ngtht\\OneDrive\\Desktop\\ExpenseTracker1786\\User App\\COMP1786MobileApp\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{6C24CEBD-27B2-4BD0-3F3F-EF4F8F659CC7}|COMP1786MobileApp\\COMP1786MobileApp.csproj|c:\\users\\ngtht\\onedrive\\documents\\expensetracker1786\\user app\\comp1786mobileapp\\comp1786mobileapp\\addexpensepage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Program Files\\dotnet\\packs\\Microsoft.Android.Sdk.Windows\\36.1.53\\tools\\Xamarin.Android.Common.targets||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6C24CEBD-27B2-4BD0-3F3F-EF4F8F659CC7}|COMP1786MobileApp\\COMP1786MobileApp.csproj|c:\\users\\ngtht\\onedrive\\desktop\\expensetracker1786\\user app\\comp1786mobileapp\\comp1786mobileapp\\addexpensepage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6C24CEBD-27B2-4BD0-3F3F-EF4F8F659CC7}|COMP1786MobileApp\\COMP1786MobileApp.csproj|solutionrelative:comp1786mobileapp\\addexpensepage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6C24CEBD-27B2-4BD0-3F3F-EF4F8F659CC7}|COMP1786MobileApp\\COMP1786MobileApp.csproj|c:\\users\\ngtht\\onedrive\\documents\\expensetracker1786\\user app\\comp1786mobileapp\\comp1786mobileapp\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{6C24CEBD-27B2-4BD0-3F3F-EF4F8F659CC7}|COMP1786MobileApp\\COMP1786MobileApp.csproj|c:\\users\\ngtht\\onedrive\\desktop\\expensetracker1786\\user app\\comp1786mobileapp\\comp1786mobileapp\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6C24CEBD-27B2-4BD0-3F3F-EF4F8F659CC7}|COMP1786MobileApp\\COMP1786MobileApp.csproj|solutionrelative:comp1786mobileapp\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6C24CEBD-27B2-4BD0-3F3F-EF4F8F659CC7}|COMP1786MobileApp\\COMP1786MobileApp.csproj|c:\\users\\ngtht\\onedrive\\documents\\expensetracker1786\\user app\\comp1786mobileapp\\comp1786mobileapp\\.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "AbsoluteMoniker": "D:0:0:{6C24CEBD-27B2-4BD0-3F3F-EF4F8F659CC7}|COMP1786MobileApp\\COMP1786MobileApp.csproj|c:\\users\\ngtht\\onedrive\\desktop\\expensetracker1786\\user app\\comp1786mobileapp\\comp1786mobileapp\\.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}",
       "RelativeMoniker": "D:0:0:{6C24CEBD-27B2-4BD0-3F3F-EF4F8F659CC7}|COMP1786MobileApp\\COMP1786MobileApp.csproj|solutionrelative:comp1786mobileapp\\.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6C24CEBD-27B2-4BD0-3F3F-EF4F8F659CC7}|COMP1786MobileApp\\COMP1786MobileApp.csproj|c:\\users\\ngtht\\onedrive\\documents\\expensetracker1786\\user app\\comp1786mobileapp\\comp1786mobileapp\\mainpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{6C24CEBD-27B2-4BD0-3F3F-EF4F8F659CC7}|COMP1786MobileApp\\COMP1786MobileApp.csproj|c:\\users\\ngtht\\onedrive\\desktop\\expensetracker1786\\user app\\comp1786mobileapp\\comp1786mobileapp\\mainpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6C24CEBD-27B2-4BD0-3F3F-EF4F8F659CC7}|COMP1786MobileApp\\COMP1786MobileApp.csproj|solutionrelative:comp1786mobileapp\\mainpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6C24CEBD-27B2-4BD0-3F3F-EF4F8F659CC7}|COMP1786MobileApp\\COMP1786MobileApp.csproj|c:\\users\\ngtht\\onedrive\\documents\\expensetracker1786\\user app\\comp1786mobileapp\\comp1786mobileapp\\mauiprogram.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{6C24CEBD-27B2-4BD0-3F3F-EF4F8F659CC7}|COMP1786MobileApp\\COMP1786MobileApp.csproj|c:\\users\\ngtht\\onedrive\\desktop\\expensetracker1786\\user app\\comp1786mobileapp\\comp1786mobileapp\\mauiprogram.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6C24CEBD-27B2-4BD0-3F3F-EF4F8F659CC7}|COMP1786MobileApp\\COMP1786MobileApp.csproj|solutionrelative:comp1786mobileapp\\mauiprogram.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6C24CEBD-27B2-4BD0-3F3F-EF4F8F659CC7}|COMP1786MobileApp\\COMP1786MobileApp.csproj|c:\\users\\ngtht\\onedrive\\documents\\expensetracker1786\\user app\\comp1786mobileapp\\comp1786mobileapp\\mainpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "AbsoluteMoniker": "D:0:0:{6C24CEBD-27B2-4BD0-3F3F-EF4F8F659CC7}|COMP1786MobileApp\\COMP1786MobileApp.csproj|c:\\users\\ngtht\\onedrive\\desktop\\expensetracker1786\\user app\\comp1786mobileapp\\comp1786mobileapp\\mainpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{6C24CEBD-27B2-4BD0-3F3F-EF4F8F659CC7}|COMP1786MobileApp\\COMP1786MobileApp.csproj|solutionrelative:comp1786mobileapp\\mainpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6C24CEBD-27B2-4BD0-3F3F-EF4F8F659CC7}|COMP1786MobileApp\\COMP1786MobileApp.csproj|c:\\users\\ngtht\\onedrive\\documents\\expensetracker1786\\user app\\comp1786mobileapp\\comp1786mobileapp\\appshell.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{6C24CEBD-27B2-4BD0-3F3F-EF4F8F659CC7}|COMP1786MobileApp\\COMP1786MobileApp.csproj|c:\\users\\ngtht\\onedrive\\desktop\\expensetracker1786\\user app\\comp1786mobileapp\\comp1786mobileapp\\appshell.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6C24CEBD-27B2-4BD0-3F3F-EF4F8F659CC7}|COMP1786MobileApp\\COMP1786MobileApp.csproj|solutionrelative:comp1786mobileapp\\appshell.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6C24CEBD-27B2-4BD0-3F3F-EF4F8F659CC7}|COMP1786MobileApp\\COMP1786MobileApp.csproj|c:\\users\\ngtht\\onedrive\\documents\\expensetracker1786\\user app\\comp1786mobileapp\\comp1786mobileapp\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "AbsoluteMoniker": "D:0:0:{6C24CEBD-27B2-4BD0-3F3F-EF4F8F659CC7}|COMP1786MobileApp\\COMP1786MobileApp.csproj|c:\\users\\ngtht\\onedrive\\desktop\\expensetracker1786\\user app\\comp1786mobileapp\\comp1786mobileapp\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{6C24CEBD-27B2-4BD0-3F3F-EF4F8F659CC7}|COMP1786MobileApp\\COMP1786MobileApp.csproj|solutionrelative:comp1786mobileapp\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6C24CEBD-27B2-4BD0-3F3F-EF4F8F659CC7}|COMP1786MobileApp\\COMP1786MobileApp.csproj|c:\\users\\ngtht\\onedrive\\documents\\expensetracker1786\\user app\\comp1786mobileapp\\comp1786mobileapp\\models\\project.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{6C24CEBD-27B2-4BD0-3F3F-EF4F8F659CC7}|COMP1786MobileApp\\COMP1786MobileApp.csproj|c:\\users\\ngtht\\onedrive\\desktop\\expensetracker1786\\user app\\comp1786mobileapp\\comp1786mobileapp\\models\\project.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6C24CEBD-27B2-4BD0-3F3F-EF4F8F659CC7}|COMP1786MobileApp\\COMP1786MobileApp.csproj|solutionrelative:comp1786mobileapp\\models\\project.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6C24CEBD-27B2-4BD0-3F3F-EF4F8F659CC7}|COMP1786MobileApp\\COMP1786MobileApp.csproj|c:\\users\\ngtht\\onedrive\\documents\\expensetracker1786\\user app\\comp1786mobileapp\\comp1786mobileapp\\services\\firebaseservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{6C24CEBD-27B2-4BD0-3F3F-EF4F8F659CC7}|COMP1786MobileApp\\COMP1786MobileApp.csproj|c:\\users\\ngtht\\onedrive\\desktop\\expensetracker1786\\user app\\comp1786mobileapp\\comp1786mobileapp\\services\\firebaseservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6C24CEBD-27B2-4BD0-3F3F-EF4F8F659CC7}|COMP1786MobileApp\\COMP1786MobileApp.csproj|solutionrelative:comp1786mobileapp\\services\\firebaseservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6C24CEBD-27B2-4BD0-3F3F-EF4F8F659CC7}|COMP1786MobileApp\\COMP1786MobileApp.csproj|c:\\users\\ngtht\\onedrive\\documents\\expensetracker1786\\user app\\comp1786mobileapp\\comp1786mobileapp\\models\\expense.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{6C24CEBD-27B2-4BD0-3F3F-EF4F8F659CC7}|COMP1786MobileApp\\COMP1786MobileApp.csproj|c:\\users\\ngtht\\onedrive\\desktop\\expensetracker1786\\user app\\comp1786mobileapp\\comp1786mobileapp\\models\\expense.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6C24CEBD-27B2-4BD0-3F3F-EF4F8F659CC7}|COMP1786MobileApp\\COMP1786MobileApp.csproj|solutionrelative:comp1786mobileapp\\models\\expense.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -54,21 +57,20 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 9,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "Project.cs",
-              "DocumentMoniker": "C:\\Users\\ngtht\\OneDrive\\Documents\\ExpenseTracker1786\\User App\\COMP1786MobileApp\\COMP1786MobileApp\\Models\\Project.cs",
+              "DocumentMoniker": "C:\\Users\\ngtht\\OneDrive\\Desktop\\ExpenseTracker1786\\User App\\COMP1786MobileApp\\COMP1786MobileApp\\Models\\Project.cs",
               "RelativeDocumentMoniker": "COMP1786MobileApp\\Models\\Project.cs",
-              "ToolTip": "C:\\Users\\ngtht\\OneDrive\\Documents\\ExpenseTracker1786\\User App\\COMP1786MobileApp\\COMP1786MobileApp\\Models\\Project.cs",
+              "ToolTip": "C:\\Users\\ngtht\\OneDrive\\Desktop\\ExpenseTracker1786\\User App\\COMP1786MobileApp\\COMP1786MobileApp\\Models\\Project.cs",
               "RelativeToolTip": "COMP1786MobileApp\\Models\\Project.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-04-21T05:54:56.11Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Bookmark",
@@ -80,133 +82,136 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "MauiProgram.cs",
-              "DocumentMoniker": "C:\\Users\\ngtht\\OneDrive\\Documents\\ExpenseTracker1786\\User App\\COMP1786MobileApp\\COMP1786MobileApp\\MauiProgram.cs",
-              "RelativeDocumentMoniker": "COMP1786MobileApp\\MauiProgram.cs",
-              "ToolTip": "C:\\Users\\ngtht\\OneDrive\\Documents\\ExpenseTracker1786\\User App\\COMP1786MobileApp\\COMP1786MobileApp\\MauiProgram.cs",
-              "RelativeToolTip": "COMP1786MobileApp\\MauiProgram.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-22T06:59:45.756Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": ".gitignore",
-              "DocumentMoniker": "C:\\Users\\ngtht\\OneDrive\\Documents\\ExpenseTracker1786\\User App\\COMP1786MobileApp\\COMP1786MobileApp\\.gitignore",
-              "RelativeDocumentMoniker": "COMP1786MobileApp\\.gitignore",
-              "ToolTip": "C:\\Users\\ngtht\\OneDrive\\Documents\\ExpenseTracker1786\\User App\\COMP1786MobileApp\\COMP1786MobileApp\\.gitignore",
-              "RelativeToolTip": "COMP1786MobileApp\\.gitignore",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2026-04-22T06:48:45.168Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "App.xaml",
-              "DocumentMoniker": "C:\\Users\\ngtht\\OneDrive\\Documents\\ExpenseTracker1786\\User App\\COMP1786MobileApp\\COMP1786MobileApp\\App.xaml",
-              "RelativeDocumentMoniker": "COMP1786MobileApp\\App.xaml",
-              "ToolTip": "C:\\Users\\ngtht\\OneDrive\\Documents\\ExpenseTracker1786\\User App\\COMP1786MobileApp\\COMP1786MobileApp\\App.xaml",
-              "RelativeToolTip": "COMP1786MobileApp\\App.xaml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-04-21T06:05:23.915Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "MainPage.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\ngtht\\OneDrive\\Documents\\ExpenseTracker1786\\User App\\COMP1786MobileApp\\COMP1786MobileApp\\MainPage.xaml.cs",
-              "RelativeDocumentMoniker": "COMP1786MobileApp\\MainPage.xaml.cs",
-              "ToolTip": "C:\\Users\\ngtht\\OneDrive\\Documents\\ExpenseTracker1786\\User App\\COMP1786MobileApp\\COMP1786MobileApp\\MainPage.xaml.cs",
-              "RelativeToolTip": "COMP1786MobileApp\\MainPage.xaml.cs",
-              "ViewState": "AgIAAF0AAAAAAAAAAAAAAHYAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-21T05:57:23.135Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "App.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\ngtht\\OneDrive\\Documents\\ExpenseTracker1786\\User App\\COMP1786MobileApp\\COMP1786MobileApp\\App.xaml.cs",
-              "RelativeDocumentMoniker": "COMP1786MobileApp\\App.xaml.cs",
-              "ToolTip": "C:\\Users\\ngtht\\OneDrive\\Documents\\ExpenseTracker1786\\User App\\COMP1786MobileApp\\COMP1786MobileApp\\App.xaml.cs",
-              "RelativeToolTip": "COMP1786MobileApp\\App.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAA6AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-21T06:12:08.4Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "FirebaseService.cs",
-              "DocumentMoniker": "C:\\Users\\ngtht\\OneDrive\\Documents\\ExpenseTracker1786\\User App\\COMP1786MobileApp\\COMP1786MobileApp\\Services\\FirebaseService.cs",
-              "RelativeDocumentMoniker": "COMP1786MobileApp\\Services\\FirebaseService.cs",
-              "ToolTip": "C:\\Users\\ngtht\\OneDrive\\Documents\\ExpenseTracker1786\\User App\\COMP1786MobileApp\\COMP1786MobileApp\\Services\\FirebaseService.cs",
-              "RelativeToolTip": "COMP1786MobileApp\\Services\\FirebaseService.cs",
-              "ViewState": "AgIAACsAAAAAAAAAAAAAwEUAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-21T05:55:49.217Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "AddExpensePage.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\ngtht\\OneDrive\\Documents\\ExpenseTracker1786\\User App\\COMP1786MobileApp\\COMP1786MobileApp\\AddExpensePage.xaml.cs",
-              "RelativeDocumentMoniker": "COMP1786MobileApp\\AddExpensePage.xaml.cs",
-              "ToolTip": "C:\\Users\\ngtht\\OneDrive\\Documents\\ExpenseTracker1786\\User App\\COMP1786MobileApp\\COMP1786MobileApp\\AddExpensePage.xaml.cs",
-              "RelativeToolTip": "COMP1786MobileApp\\AddExpensePage.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAADUAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-21T06:06:38.184Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "AppShell.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\ngtht\\OneDrive\\Documents\\ExpenseTracker1786\\User App\\COMP1786MobileApp\\COMP1786MobileApp\\AppShell.xaml.cs",
-              "RelativeDocumentMoniker": "COMP1786MobileApp\\AppShell.xaml.cs",
-              "ToolTip": "C:\\Users\\ngtht\\OneDrive\\Documents\\ExpenseTracker1786\\User App\\COMP1786MobileApp\\COMP1786MobileApp\\AppShell.xaml.cs",
-              "RelativeToolTip": "COMP1786MobileApp\\AppShell.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-21T06:14:38.943Z",
+              "Title": "Xamarin.Android.Common.targets",
+              "DocumentMoniker": "C:\\Program Files\\dotnet\\packs\\Microsoft.Android.Sdk.Windows\\36.1.53\\tools\\Xamarin.Android.Common.targets",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\..\\Program Files\\dotnet\\packs\\Microsoft.Android.Sdk.Windows\\36.1.53\\tools\\Xamarin.Android.Common.targets",
+              "ToolTip": "C:\\Program Files\\dotnet\\packs\\Microsoft.Android.Sdk.Windows\\36.1.53\\tools\\Xamarin.Android.Common.targets",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\..\\..\\Program Files\\dotnet\\packs\\Microsoft.Android.Sdk.Windows\\36.1.53\\tools\\Xamarin.Android.Common.targets",
+              "ViewState": "AgIAAC0LAAAAAAAAAADwv0ELAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003801|",
+              "WhenOpened": "2026-04-22T09:59:28.244Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "MainPage.xaml",
-              "DocumentMoniker": "C:\\Users\\ngtht\\OneDrive\\Documents\\ExpenseTracker1786\\User App\\COMP1786MobileApp\\COMP1786MobileApp\\MainPage.xaml",
-              "RelativeDocumentMoniker": "COMP1786MobileApp\\MainPage.xaml",
-              "ToolTip": "C:\\Users\\ngtht\\OneDrive\\Documents\\ExpenseTracker1786\\User App\\COMP1786MobileApp\\COMP1786MobileApp\\MainPage.xaml",
-              "RelativeToolTip": "COMP1786MobileApp\\MainPage.xaml",
-              "ViewState": "AgIAAAQAAAAAAAAAAAAIwB0AAAAcAAAAAAAAAA==",
+              "Title": "MauiProgram.cs",
+              "DocumentMoniker": "C:\\Users\\ngtht\\OneDrive\\Desktop\\ExpenseTracker1786\\User App\\COMP1786MobileApp\\COMP1786MobileApp\\MauiProgram.cs",
+              "RelativeDocumentMoniker": "COMP1786MobileApp\\MauiProgram.cs",
+              "ToolTip": "C:\\Users\\ngtht\\OneDrive\\Desktop\\ExpenseTracker1786\\User App\\COMP1786MobileApp\\COMP1786MobileApp\\MauiProgram.cs",
+              "RelativeToolTip": "COMP1786MobileApp\\MauiProgram.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-22T06:59:45.756Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": ".gitignore",
+              "DocumentMoniker": "C:\\Users\\ngtht\\OneDrive\\Desktop\\ExpenseTracker1786\\User App\\COMP1786MobileApp\\COMP1786MobileApp\\.gitignore",
+              "RelativeDocumentMoniker": "COMP1786MobileApp\\.gitignore",
+              "ToolTip": "C:\\Users\\ngtht\\OneDrive\\Desktop\\ExpenseTracker1786\\User App\\COMP1786MobileApp\\COMP1786MobileApp\\.gitignore",
+              "RelativeToolTip": "COMP1786MobileApp\\.gitignore",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-04-22T06:48:45.168Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "App.xaml",
+              "DocumentMoniker": "C:\\Users\\ngtht\\OneDrive\\Desktop\\ExpenseTracker1786\\User App\\COMP1786MobileApp\\COMP1786MobileApp\\App.xaml",
+              "RelativeDocumentMoniker": "COMP1786MobileApp\\App.xaml",
+              "ToolTip": "C:\\Users\\ngtht\\OneDrive\\Desktop\\ExpenseTracker1786\\User App\\COMP1786MobileApp\\COMP1786MobileApp\\App.xaml",
+              "RelativeToolTip": "COMP1786MobileApp\\App.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-04-21T05:57:41.104Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-21T06:05:23.915Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "MainPage.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\ngtht\\OneDrive\\Desktop\\ExpenseTracker1786\\User App\\COMP1786MobileApp\\COMP1786MobileApp\\MainPage.xaml.cs",
+              "RelativeDocumentMoniker": "COMP1786MobileApp\\MainPage.xaml.cs",
+              "ToolTip": "C:\\Users\\ngtht\\OneDrive\\Desktop\\ExpenseTracker1786\\User App\\COMP1786MobileApp\\COMP1786MobileApp\\MainPage.xaml.cs",
+              "RelativeToolTip": "COMP1786MobileApp\\MainPage.xaml.cs",
+              "ViewState": "AgIAAF0AAAAAAAAAAAAAAHYAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-21T05:57:23.135Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "App.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\ngtht\\OneDrive\\Desktop\\ExpenseTracker1786\\User App\\COMP1786MobileApp\\COMP1786MobileApp\\App.xaml.cs",
+              "RelativeDocumentMoniker": "COMP1786MobileApp\\App.xaml.cs",
+              "ToolTip": "C:\\Users\\ngtht\\OneDrive\\Desktop\\ExpenseTracker1786\\User App\\COMP1786MobileApp\\COMP1786MobileApp\\App.xaml.cs",
+              "RelativeToolTip": "COMP1786MobileApp\\App.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAA6AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-21T06:12:08.4Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 10,
+              "Title": "FirebaseService.cs",
+              "DocumentMoniker": "C:\\Users\\ngtht\\OneDrive\\Desktop\\ExpenseTracker1786\\User App\\COMP1786MobileApp\\COMP1786MobileApp\\Services\\FirebaseService.cs",
+              "RelativeDocumentMoniker": "COMP1786MobileApp\\Services\\FirebaseService.cs",
+              "ToolTip": "C:\\Users\\ngtht\\OneDrive\\Desktop\\ExpenseTracker1786\\User App\\COMP1786MobileApp\\COMP1786MobileApp\\Services\\FirebaseService.cs",
+              "RelativeToolTip": "COMP1786MobileApp\\Services\\FirebaseService.cs",
+              "ViewState": "AgIAACsAAAAAAAAAAAAAwEUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-21T05:55:49.217Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AddExpensePage.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\ngtht\\OneDrive\\Desktop\\ExpenseTracker1786\\User App\\COMP1786MobileApp\\COMP1786MobileApp\\AddExpensePage.xaml.cs",
+              "RelativeDocumentMoniker": "COMP1786MobileApp\\AddExpensePage.xaml.cs",
+              "ToolTip": "C:\\Users\\ngtht\\OneDrive\\Desktop\\ExpenseTracker1786\\User App\\COMP1786MobileApp\\COMP1786MobileApp\\AddExpensePage.xaml.cs",
+              "RelativeToolTip": "COMP1786MobileApp\\AddExpensePage.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-21T06:06:38.184Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "AppShell.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\ngtht\\OneDrive\\Desktop\\ExpenseTracker1786\\User App\\COMP1786MobileApp\\COMP1786MobileApp\\AppShell.xaml.cs",
+              "RelativeDocumentMoniker": "COMP1786MobileApp\\AppShell.xaml.cs",
+              "ToolTip": "C:\\Users\\ngtht\\OneDrive\\Desktop\\ExpenseTracker1786\\User App\\COMP1786MobileApp\\COMP1786MobileApp\\AppShell.xaml.cs",
+              "RelativeToolTip": "COMP1786MobileApp\\AppShell.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-21T06:14:38.943Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "MainPage.xaml",
+              "DocumentMoniker": "C:\\Users\\ngtht\\OneDrive\\Desktop\\ExpenseTracker1786\\User App\\COMP1786MobileApp\\COMP1786MobileApp\\MainPage.xaml",
+              "RelativeDocumentMoniker": "COMP1786MobileApp\\MainPage.xaml",
+              "ToolTip": "C:\\Users\\ngtht\\OneDrive\\Desktop\\ExpenseTracker1786\\User App\\COMP1786MobileApp\\COMP1786MobileApp\\MainPage.xaml",
+              "RelativeToolTip": "COMP1786MobileApp\\MainPage.xaml",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAIwB0AAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-04-21T05:57:41.104Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
               "Title": "Expense.cs",
-              "DocumentMoniker": "C:\\Users\\ngtht\\OneDrive\\Documents\\ExpenseTracker1786\\User App\\COMP1786MobileApp\\COMP1786MobileApp\\Models\\Expense.cs",
+              "DocumentMoniker": "C:\\Users\\ngtht\\OneDrive\\Desktop\\ExpenseTracker1786\\User App\\COMP1786MobileApp\\COMP1786MobileApp\\Models\\Expense.cs",
               "RelativeDocumentMoniker": "COMP1786MobileApp\\Models\\Expense.cs",
-              "ToolTip": "C:\\Users\\ngtht\\OneDrive\\Documents\\ExpenseTracker1786\\User App\\COMP1786MobileApp\\COMP1786MobileApp\\Models\\Expense.cs",
+              "ToolTip": "C:\\Users\\ngtht\\OneDrive\\Desktop\\ExpenseTracker1786\\User App\\COMP1786MobileApp\\COMP1786MobileApp\\Models\\Expense.cs",
               "RelativeToolTip": "COMP1786MobileApp\\Models\\Expense.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-21T05:52:26.571Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-21T05:52:26.571Z"
             },
             {
               "$type": "Bookmark",

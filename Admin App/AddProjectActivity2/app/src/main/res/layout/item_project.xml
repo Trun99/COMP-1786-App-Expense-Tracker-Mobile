@@ -33,7 +33,8 @@
                 android:layout_height="wrap_content"
                 android:text="£0.00"
                 android:textColor="@android:color/holo_red_dark"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:textSize="16sp" />
         </LinearLayout>
 
         <TextView
@@ -63,7 +64,7 @@
                 android:layout_height="48dp"
                 android:background="?attr/selectableItemBackgroundBorderless"
                 android:src="@android:drawable/ic_menu_edit"
-                app:tint="@color/design_default_color_primary" />
+                app:tint="@color/purple_500" />
 
             <ImageButton
                 android:id="@+id/btnDelete"
