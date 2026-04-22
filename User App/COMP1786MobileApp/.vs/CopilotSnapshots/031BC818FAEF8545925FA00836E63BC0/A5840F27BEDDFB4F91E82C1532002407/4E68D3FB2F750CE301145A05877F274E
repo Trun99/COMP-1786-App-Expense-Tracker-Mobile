@@ -1,0 +1,19 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace COMP1786MobileApp.Models
+{
+    public class Expense
+    {
+        public string ProjectId { get; set; }
+        public double Amount { get; set; }
+        public DateTime Date { get; set; }
+        public string Type { get; set; }
+        public string PaymentMethod { get; set; }
+        public string Claimant { get; set; }
+        public string Description { get; set; }
+        public string Status { get; set; } = "Pending";
+    }
+}
+}

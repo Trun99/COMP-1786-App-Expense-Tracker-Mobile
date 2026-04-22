@@ -1,0 +1,32 @@
+﻿using COMP1786MobileApp.Models;
+using Firebase.Database;
+using Firebase.Database.Query;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace COMP1786MobileApp.Services
+{
+    public class FirebaseService
+    {
+        private readonly FirebaseClient client = new FirebaseClient("https://mobileappexpensetracker-default-rtdb.firebaseio.com/");
+
+        public async Task<List<Project>> GetProjectsAsync()
+        {
+            var list = await client.Child("projects").OnceAsync<Project>();
+            return list.Select(x => {
+                var p = x.Object;
+                p.Id = x.Key;
+                return p;
+            }).ToList();
+        }
+
+        public async Task AddExpenseAsync(Expense exp)
+        {
+            await client.Child("expenses").PostAsync(exp);
+        }
+    }
+}
+    

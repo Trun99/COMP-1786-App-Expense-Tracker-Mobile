@@ -1,0 +1,66 @@
+﻿using COMP1786MobileApp.Models;
+using COMP1786MobileApp.Services;
+
+namespace COMP1786MobileApp
+{
+    public partial class MainPage : ContentPage
+    {
+        FirebaseService _service = new FirebaseService();
+        List<Project> allProjects = new List<Project>();
+
+        public MainPage()
+        {
+            InitializeComponent();
+        }
+
+        protected override async void OnAppearing()
+        {
+            base.OnAppearing();
+            try
+            {
+                
+                allProjects = await _service.GetProjectsAsync();
+                projectList.ItemsSource = allProjects;
+            }
+            catch (Exception ex)
+            {
+                await DisplayAlert("Error", "Connection failed: " + ex.Message, "OK");
+            }
+        }
+
+        
+        void OnSearch(object sender, TextChangedEventArgs e)
+        {
+            if (allProjects == null) return;
+            var filteredList = allProjects.Where(p =>
+                p.projectName.ToLower().Contains(e.NewTextValue.ToLower())).ToList();
+            projectList.ItemsSource = filteredList;
+        }
+
+       
+        void OnFavClicked(object sender, EventArgs e)
+        {
+            var button = sender as Button;
+            var p = button?.CommandParameter as Project;
+            if (p != null)
+            {
+                Preferences.Set("Fav_" + p.Id, true);
+                DisplayAlert("Success", $"Added '{p.projectName}' to favourites", "OK");
+            }
+        }
+
+      
+        private async void OnProjectSelected(object sender, SelectionChangedEventArgs e)
+        {
+            
+            if (e.CurrentSelection.FirstOrDefault() is Project selectedProject)
+            {
+               
+                await Navigation.PushAsync(new AddExpensePage(selectedProject));
+
+               
+                ((CollectionView)sender).SelectedItem = null;
+            }
+        }
+    }
+}

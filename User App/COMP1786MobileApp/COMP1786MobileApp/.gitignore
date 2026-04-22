@@ -1,0 +1,51 @@
+# Build output
+bin/
+obj/
+artifacts/
+TestResults/
+build/
+
+# .NET / NuGet
+packages/
+*.nupkg
+*.snupkg
+project.lock.json
+project.fragment.lock.json
+*.nuget.props
+*.nuget.targets
+
+# IDE and user-specific files
+.vs/
+.vscode/
+.idea/
+.fleet/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+*.iml
+
+# MAUI / Xamarin / Android generated files
+*.apk
+*.aab
+*.ap_
+*.dex
+*.class
+*.keystore
+*.jks
+*.dmp
+.gradle/
+local.properties
+captures/
+
+# Debug symbols, caches, logs
+*.cache
+*.pdb
+*.mdb
+*.log
+*.tmp
+*.temp
+
+# OS files
+.DS_Store
+Thumbs.db

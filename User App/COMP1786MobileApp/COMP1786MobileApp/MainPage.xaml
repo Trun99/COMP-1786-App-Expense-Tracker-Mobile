@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="COMP1786MobileApp.MainPage">
+
+    <VerticalStackLayout Padding="15" Spacing="10">
+        <SearchBar x:Name="searchBar" Placeholder="Search by name/date..." TextChanged="OnSearch" />
+        <HorizontalStackLayout Spacing="10">
+            <Button x:Name="showAllButton" Text="All Projects" Clicked="OnShowAllClicked" />
+            <Button x:Name="showFavouriteButton" Text="Favourites" Clicked="OnShowFavouritesClicked" />
+        </HorizontalStackLayout>
+
+        <CollectionView x:Name="projectList" SelectionMode="None">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Frame Margin="5" Padding="10" BackgroundColor="White" CornerRadius="10" HasShadow="True">
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="OnProjectTapped" CommandParameter="{Binding .}" />
+                        </Frame.GestureRecognizers>
+                        <Grid ColumnDefinitions="*, Auto">
+                            <VerticalStackLayout Grid.Column="0" Spacing="2">
+                                <Label Text="{Binding Name}" FontSize="18" FontAttributes="Bold" TextColor="Black" />
+                                <Label Text="{Binding Manager, StringFormat='Manager: {0}'}" TextColor="Gray" />
+                                <Label Text="{Binding StartDate, StringFormat='Start: {0}'}" FontSize="11" TextColor="Gray" />
+                                <Label Text="{Binding Id, StringFormat='ID: {0}'}" FontSize="11" TextColor="Gray" />
+                                <Label Text="{Binding Status, StringFormat='Status: {0}'}" FontSize="11" TextColor="Gray" />
+                                <Label Text="Tap to view project expenses"
+                                       FontSize="11"
+                                       TextColor="#2E7D32"
+                                       Margin="0,8,0,0" />
+                            </VerticalStackLayout>
+
+                            <Button Grid.Column="1" 
+                            Text="★" 
+                            FontSize="20"
+                            BackgroundColor="Transparent"
+                            TextColor="{Binding IsFavourite, Converter={StaticResource BoolToColorConverter}}" 
+                            Clicked="OnFavClicked" 
+                            CommandParameter="{Binding .}"
+                            VerticalOptions="Center" />
+                        </Grid>
+                    </Frame>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </VerticalStackLayout>
+
+</ContentPage>

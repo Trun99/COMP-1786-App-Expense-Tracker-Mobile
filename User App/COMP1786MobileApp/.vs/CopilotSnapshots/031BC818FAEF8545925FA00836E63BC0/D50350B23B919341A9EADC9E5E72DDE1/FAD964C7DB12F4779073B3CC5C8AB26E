@@ -1,0 +1,113 @@
+﻿using COMP1786MobileApp.Models;
+using Firebase.Database;
+using Firebase.Database.Query;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Text.Json;
+
+namespace COMP1786MobileApp.Services
+{
+    public class FirebaseService
+    {
+        private const string BaseUrl = "https://mobileappexpensetracker-default-rtdb.firebaseio.com/";
+        private readonly FirebaseClient client = new FirebaseClient(BaseUrl);
+
+        public async Task<List<Project>> GetProjectsAsync()
+        {
+            var results = new List<Project>();
+            try
+            {
+                var list = await client.Child("projects").OnceAsync<object>();
+
+                if (list != null)
+                {
+                    foreach (var item in list)
+                    {
+                        try
+                        {
+                            var json = JsonSerializer.Serialize(item.Object);
+                            var dict = JsonSerializer.Deserialize<Dictionary<string, JsonElement>>(json);
+
+                            if (dict != null)
+                            {
+                                results.Add(MapProjectFromDict(item.Key, dict));
+                            }
+                        }
+                        catch (Exception exInner)
+                        {
+                            System.Diagnostics.Debug.WriteLine($"Mapping error: {exInner.Message}");
+                        }
+                    }
+                }
+                return results;
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Debug.WriteLine($"Fetch error: {ex.Message}");
+                return results;
+            }
+        }
+
+        private Project MapProjectFromDict(string key, Dictionary<string, JsonElement> dict)
+        {
+            var p = new Project();
+            p.Id = key;
+
+            string GetSafeString(string fieldName)
+            {
+                if (dict.TryGetValue(fieldName, out JsonElement element))
+                {
+                  
+                    string raw = element.ToString().Trim();
+
+                   
+                    if (raw.StartsWith("\"") && raw.EndsWith("\""))
+                        raw = raw.Substring(1, raw.Length - 2);
+
+                    return raw == "null" ? "" : raw;
+                }
+                return null;
+            }
+
+            
+            p.Name = GetSafeString("name") ?? GetSafeString("name:") ?? "Unknown";
+            p.Manager = GetSafeString("manager") ?? "N/A";
+            p.Code = GetSafeString("code") ?? "000";
+
+          
+            string budgetStr = GetSafeString("budget");
+            if (decimal.TryParse(budgetStr, out decimal b)) p.Budget = b;
+
+            p.Status = GetSafeString("status") ?? "Active";
+
+            
+            p.IsFavourite = false;
+
+            return p;
+        }
+
+        public async Task AddExpenseAsync(Expense exp)
+        {
+            await client.Child("expenses").PostAsync(exp);
+        }
+
+        // Added this back to fix your error
+        public async Task<bool> TestConnectionAsync()
+        {
+            try
+            {
+                using var http = new System.Net.Http.HttpClient();
+                http.Timeout = TimeSpan.FromSeconds(5);
+                var res = await http.GetAsync(BaseUrl + ".json");
+                return res.IsSuccessStatusCode;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+    }
+}

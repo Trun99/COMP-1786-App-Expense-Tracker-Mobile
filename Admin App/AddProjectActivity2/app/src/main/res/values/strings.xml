@@ -1,0 +1,57 @@
+<resources>
+    <string name="app_name">Expense Tracker</string>
+    
+    <!-- Project Strings -->
+    <string name="project_id_required">Project ID/Code (Required)</string>
+    <string name="project_name_required">Project Name (Required)</string>
+    <string name="project_desc_required">Project Description (Required)</string>
+    <string name="start_date_required">Start Date (Required)</string>
+    <string name="end_date_required">End Date (Required)</string>
+    <string name="manager_required">Project Manager/Owner (Required)</string>
+    <string name="status_required">Project Status (Required)</string>
+    <string name="budget_required">Project Budget (Required)</string>
+    <string name="requirements_optional">Special Requirements (Optional)</string>
+    <string name="client_optional">Client/Department (Optional)</string>
+    
+    <!-- Expense Strings -->
+    <string name="expense_details">Expense Tracker</string>
+    <string name="expense_id_required">Expense ID (Required)</string>
+    <string name="expense_date_required">Date of Expense (Required)</string>
+    <string name="amount_required">Amount (Required)</string>
+    <string name="currency">Currency</string>
+    <string name="expense_type_required">Type of Expense (Required)</string>
+    <string name="payment_method_required">Payment Method (Required)</string>
+    <string name="claimant_required">Claimant (Required)</string>
+    <string name="payment_status_required">Payment Status (Required)</string>
+    <string name="desc_optional">Description (Optional)</string>
+    <string name="location_optional">Location (Optional)</string>
+    <string name="save_expense">Save Expense</string>
+
+    <!-- Arrays -->
+    <string-array name="project_status_array">
+        <item>Active</item>
+        <item>Completed</item>
+        <item>On Hold</item>
+    </string-array>
+    <string-array name="expense_type_array">
+        <item>Travel</item>
+        <item>Equipment</item>
+        <item>Materials</item>
+        <item>Services</item>
+        <item>Software/Licenses</item>
+        <item>Labour costs</item>
+        <item>Utilities</item>
+        <item>Miscellaneous</item>
+    </string-array>
+    <string-array name="payment_method_array">
+        <item>Cash</item>
+        <item>Credit Card</item>
+        <item>Bank Transfer</item>
+        <item>Cheque</item>
+    </string-array>
+    <string-array name="payment_status_array">
+        <item>Paid</item>
+        <item>Pending</item>
+        <item>Reimbursed</item>
+    </string-array>
+</resources>

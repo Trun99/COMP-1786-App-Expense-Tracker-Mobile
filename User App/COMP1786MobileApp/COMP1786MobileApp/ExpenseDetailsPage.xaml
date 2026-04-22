@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="COMP1786MobileApp.ExpenseDetailsPage"
+             Title="Expense Details">
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="10">
+            <Label x:Name="projectNameLabel" FontAttributes="Bold" FontSize="18" />
+            <Label x:Name="expenseCodeLabel" />
+            <Label x:Name="amountLabel" />
+            <Label x:Name="currencyLabel" />
+            <Label x:Name="typeLabel" />
+            <Label x:Name="dateLabel" />
+            <Label x:Name="paymentMethodLabel" />
+            <Label x:Name="claimantLabel" />
+            <Label x:Name="statusLabel" />
+            <Label x:Name="locationLabel" />
+            <Label x:Name="descriptionLabel" />
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="COMP1786MobileApp.MainPage">
+
+    <VerticalStackLayout Padding="15" Spacing="10">
+        <SearchBar x:Name="searchBar" Placeholder="Search by name/date..." TextChanged="OnSearch" />
+
+        <CollectionView x:Name="projectList" SelectionMode="Single" SelectionChanged="OnProjectSelected">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Frame Margin="5" Padding="10" BackgroundColor="#F7F7F7" CornerRadius="6">
+                        <HorizontalStackLayout Spacing="10">
+                            <VerticalStackLayout WidthRequest="250">
+                                <Label Text="{Binding Name}" FontSize="18" FontAttributes="Bold" TextColor="Black" />
+                                <Label Text="{Binding Manager}" TextColor="Gray" />
+                                <Label Text="{Binding Id, StringFormat='ID: {0}'}" FontSize="12" TextColor="DarkGray" />
+                                <Label Text="{Binding Status, StringFormat='Status: {0}'}" FontSize="12" TextColor="DarkGray" />
+                            </VerticalStackLayout>
+                            <Button Text="★" Clicked="OnFavClicked" CommandParameter="{Binding .}" />
+                        </HorizontalStackLayout>
+                    </Frame>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </VerticalStackLayout>
+
+</ContentPage>

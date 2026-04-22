@@ -1,0 +1,16 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace COMP1786MobileApp.Models
+{
+    internal class Project
+    {
+        public string Id { get; set; } // Firebase Key
+        public string projectName { get; set; }
+        public string projectManager { get; set; }
+        public string projectStatus { get; set; }
+        public decimal projectBudget { get; set; }
+        public bool IsFavourite { get; set; }
+    }
+}

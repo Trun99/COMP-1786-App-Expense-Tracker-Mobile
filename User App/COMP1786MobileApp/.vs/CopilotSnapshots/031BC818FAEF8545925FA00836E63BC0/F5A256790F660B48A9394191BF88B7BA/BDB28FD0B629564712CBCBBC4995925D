@@ -1,0 +1,198 @@
+﻿using COMP1786MobileApp.Models;
+using Firebase.Database;
+using Firebase.Database.Query;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace COMP1786MobileApp.Services
+{
+    public class FirebaseService
+    {
+        private const string BaseUrl = "https://mobileappexpensetracker-default-rtdb.firebaseio.com/";
+        private readonly FirebaseClient client = new FirebaseClient(BaseUrl);
+
+        public async Task<List<Project>> GetProjectsAsync()
+        {
+            try
+            {
+                var list = await client.Child("projects").OnceAsync<object>();
+
+                var results = new List<Project>();
+
+                if (list != null && list.Count > 0)
+                {
+                    foreach (var item in list)
+                    {
+                        try
+                        {
+                            var json = System.Text.Json.JsonSerializer.Serialize(item.Object);
+                            var dict = System.Text.Json.JsonSerializer.Deserialize<Dictionary<string, System.Text.Json.JsonElement>>(json);
+
+                            var p = MapProjectFromDict(item.Key, dict);
+                            results.Add(p);
+                        }
+                        catch (Exception exInner)
+                        {
+                            System.Diagnostics.Debug.WriteLine($"Map project item failed: {exInner}");
+                        }
+                    }
+                    return results;
+                }
+
+                // Fallback: fetch raw JSON from /projects.json and parse manually
+                try
+                {
+                    using var http = new System.Net.Http.HttpClient();
+                    http.Timeout = TimeSpan.FromSeconds(10);
+                    var url = BaseUrl.TrimEnd('/') + "/projects.json";
+                    var raw = await http.GetStringAsync(url);
+                    if (string.IsNullOrWhiteSpace(raw) || raw == "null")
+                        return results;
+
+                    var rootDict = System.Text.Json.JsonSerializer.Deserialize<Dictionary<string, System.Text.Json.JsonElement>>(raw);
+                    if (rootDict == null)
+                        return results;
+
+                    // If the structure has a nested "projects" node, use it
+                    if (rootDict.TryGetValue("projects", out var projectsEl) && projectsEl.ValueKind == System.Text.Json.JsonValueKind.Object)
+                    {
+                        var projectsDict = System.Text.Json.JsonSerializer.Deserialize<Dictionary<string, System.Text.Json.JsonElement>>(projectsEl.GetRawText());
+                        if (projectsDict != null)
+                        {
+                            foreach (var kvp in projectsDict)
+                            {
+                                try
+                                {
+                                    var dict = System.Text.Json.JsonSerializer.Deserialize<Dictionary<string, System.Text.Json.JsonElement>>(kvp.Value.GetRawText());
+                                    var p = MapProjectFromDict(kvp.Key, dict);
+                                    results.Add(p);
+                                }
+                                catch (Exception exInner)
+                                {
+                                    System.Diagnostics.Debug.WriteLine($"Map project (nested) failed: {exInner}");
+                                }
+                            }
+                        }
+                    }
+                    else
+                    {
+                        // root is the projects dictionary
+                        foreach (var kvp in rootDict)
+                        {
+                            try
+                            {
+                                var dict = System.Text.Json.JsonSerializer.Deserialize<Dictionary<string, System.Text.Json.JsonElement>>(kvp.Value.GetRawText());
+                                var p = MapProjectFromDict(kvp.Key, dict);
+                                results.Add(p);
+                            }
+                            catch (Exception exInner)
+                            {
+                                System.Diagnostics.Debug.WriteLine($"Map project (root) failed: {exInner}");
+                            }
+                        }
+                    }
+
+                    return results;
+                }
+                catch (Exception exHttp)
+                {
+                    System.Diagnostics.Debug.WriteLine($"Fallback HTTP projects.json failed: {exHttp}");
+                    return results;
+                }
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Debug.WriteLine($"GetProjectsAsync failed: {ex}");
+                // rethrow so callers can show error to user / debug
+                throw;
+            }
+        }
+
+        private Project MapProjectFromDict(string key, Dictionary<string, System.Text.Json.JsonElement> dict)
+        {
+            var p = new Project();
+            p.Id = key;
+            if (dict == null) return p;
+
+            if (dict.TryGetValue("name", out var nameEl) && nameEl.ValueKind != System.Text.Json.JsonValueKind.Null)
+                p.Name = nameEl.GetString();
+            else if (dict.TryGetValue("projectName", out var pnameEl) && pnameEl.ValueKind != System.Text.Json.JsonValueKind.Null)
+                p.Name = pnameEl.GetString();
+            else if (dict.TryGetValue("code", out var codeEl) && codeEl.ValueKind != System.Text.Json.JsonValueKind.Null)
+                p.Name = codeEl.GetString();
+
+            if (dict.TryGetValue("manager", out var mgrEl) && mgrEl.ValueKind != System.Text.Json.JsonValueKind.Null)
+                p.Manager = mgrEl.GetString();
+            else if (dict.TryGetValue("projectManager", out var pmEl) && pmEl.ValueKind != System.Text.Json.JsonValueKind.Null)
+                p.Manager = pmEl.GetString();
+
+            if (dict.TryGetValue("budget", out var budEl) && budEl.ValueKind != System.Text.Json.JsonValueKind.Null)
+            {
+                if (budEl.TryGetDecimal(out var dec))
+                    p.Budget = dec;
+                else if (budEl.ValueKind == System.Text.Json.JsonValueKind.Number)
+                {
+                    if (budEl.TryGetDouble(out var d))
+                        p.Budget = (decimal)d;
+                }
+                else if (budEl.ValueKind == System.Text.Json.JsonValueKind.String)
+                {
+                    if (decimal.TryParse(budEl.GetString(), out var parsed))
+                        p.Budget = parsed;
+                }
+            }
+
+            if (dict.TryGetValue("status", out var stEl) && stEl.ValueKind != System.Text.Json.JsonValueKind.Null)
+                p.Status = stEl.GetString();
+
+            // Some entries may contain an 'id' or numeric id inside the object
+            if (dict.TryGetValue("id", out var idEl) && idEl.ValueKind != System.Text.Json.JsonValueKind.Null)
+            {
+                var innerId = idEl.GetString();
+                if (!string.IsNullOrWhiteSpace(innerId)) p.Id = innerId;
+            }
+
+            return p;
+        }
+
+        public async Task AddExpenseAsync(Expense exp)
+        {
+            try
+            {
+                await client.Child("expenses").PostAsync(exp);
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Debug.WriteLine($"AddExpenseAsync failed: {ex}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Quick connectivity check to the Realtime Database root.
+        /// Useful for surfacing connectivity / permission issues.
+        /// </summary>
+        public async Task<bool> TestConnectionAsync()
+        {
+            try
+            {
+                using var http = new System.Net.Http.HttpClient();
+                http.Timeout = TimeSpan.FromSeconds(10);
+                var url = BaseUrl.TrimEnd('/') + "/.json";
+                var res = await http.GetAsync(url);
+                var ok = res.IsSuccessStatusCode;
+                System.Diagnostics.Debug.WriteLine($"TestConnectionAsync GET {url} -> {(int)res.StatusCode}");
+                return ok;
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Debug.WriteLine($"TestConnectionAsync failed: {ex}");
+                return false;
+            }
+        }
+    }
+}
+    

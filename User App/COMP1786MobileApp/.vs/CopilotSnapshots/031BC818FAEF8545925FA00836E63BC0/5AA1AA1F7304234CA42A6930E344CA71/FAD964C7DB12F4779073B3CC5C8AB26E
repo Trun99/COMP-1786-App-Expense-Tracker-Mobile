@@ -1,0 +1,77 @@
+﻿using COMP1786MobileApp.Models;
+using Firebase.Database;
+using Firebase.Database.Query;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace COMP1786MobileApp.Services
+{
+    public class FirebaseService
+    {
+        private const string BaseUrl = "https://mobileappexpensetracker-default-rtdb.firebaseio.com/";
+        private readonly FirebaseClient client = new FirebaseClient(BaseUrl);
+
+        public async Task<List<Project>> GetProjectsAsync()
+        {
+            try
+            {
+                var list = await client.Child("projects").OnceAsync<Project>();
+
+                if (list == null)
+                    return new List<Project>();
+
+                return list.Select(x => {
+                    var p = x.Object;
+                    p.Id = x.Key;
+                    return p;
+                }).ToList();
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Debug.WriteLine($"GetProjectsAsync failed: {ex}");
+                // rethrow so callers can show error to user / debug
+                throw;
+            }
+        }
+
+        public async Task AddExpenseAsync(Expense exp)
+        {
+            try
+            {
+                await client.Child("expenses").PostAsync(exp);
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Debug.WriteLine($"AddExpenseAsync failed: {ex}");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Quick connectivity check to the Realtime Database root.
+        /// Useful for surfacing connectivity / permission issues.
+        /// </summary>
+        public async Task<bool> TestConnectionAsync()
+        {
+            try
+            {
+                using var http = new System.Net.Http.HttpClient();
+                http.Timeout = TimeSpan.FromSeconds(10);
+                var url = BaseUrl.TrimEnd('/') + "/.json";
+                var res = await http.GetAsync(url);
+                var ok = res.IsSuccessStatusCode;
+                System.Diagnostics.Debug.WriteLine($"TestConnectionAsync GET {url} -> {(int)res.StatusCode}");
+                return ok;
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Debug.WriteLine($"TestConnectionAsync failed: {ex}");
+                return false;
+            }
+        }
+    }
+}
+    

@@ -1,0 +1,121 @@
+﻿using COMP1786MobileApp.Models;
+using COMP1786MobileApp.Services;
+using System.Linq;
+using System.Collections.Generic;
+
+namespace COMP1786MobileApp
+{
+    public partial class MainPage : ContentPage
+    {
+     
+        FirebaseService _service = new FirebaseService();
+
+        
+        List<Project> allProjects = new List<Project>();
+
+        public MainPage()
+        {
+            InitializeComponent();
+        }
+
+
+        protected override async void OnAppearing()
+        {
+            base.OnAppearing();
+            try
+            {
+                // quick connectivity check
+                var connOk = await _service.TestConnectionAsync();
+                if (!connOk)
+                {
+                    await DisplayAlert("Connection", "Cannot reach Firebase DB. Check your internet or DB URL/rules.", "OK");
+                }
+
+                var projects = await _service.GetProjectsAsync();
+
+                // Debug: show how many projects were returned and the first item's data
+                try
+                {
+                    if (projects != null && projects.Count > 0)
+                    {
+                        var firstJson = System.Text.Json.JsonSerializer.Serialize(projects[0]);
+                        await DisplayAlert("Debug", $"Projects returned: {projects.Count}\nFirst.projectName: {projects[0].projectName}\nFirst JSON: {firstJson}", "OK");
+                    }
+                }
+                catch { }
+
+                // Check local storage for each project's favourite status
+                foreach (var p in projects)
+                {
+                    p.IsFavourite = Preferences.Get("Fav_" + p.Id, false);
+                }
+
+                // Sort: Favourites first, then others (Requirement h)
+                allProjects = projects.OrderByDescending(p => p.IsFavourite).ToList();
+
+                projectList.ItemsSource = allProjects;
+                if (projects == null || projects.Count == 0)
+                {
+                    // No projects returned from the service — surface to user for debugging
+                    await DisplayAlert("Info", "No projects were found. Check your Firebase data path and rules.", "OK");
+                }
+            }
+            catch (Exception ex)
+            {
+                // Surface errors instead of swallowing them so the user can debug connection issues
+                await DisplayAlert("Error", "Failed to load projects: " + ex.Message, "OK");
+            }
+        }
+
+
+        void OnSearch(object sender, TextChangedEventArgs e)
+        {
+            if (allProjects == null) return;
+
+            var query = e?.NewTextValue ?? string.Empty;
+
+            // If the search box is empty, restore full list
+            if (string.IsNullOrWhiteSpace(query))
+            {
+                projectList.ItemsSource = allProjects;
+                return;
+            }
+
+            var q = query.ToLowerInvariant();
+            var filteredList = allProjects.Where(p =>
+                (p.projectName ?? string.Empty).ToLowerInvariant().Contains(q)).ToList();
+
+            projectList.ItemsSource = filteredList;
+        }
+
+      
+        void OnFavClicked(object sender, EventArgs e)
+        {
+            
+            var button = sender as Button;
+            var p = button?.CommandParameter as Project;
+
+            if (p != null)
+            {
+                
+                Preferences.Set("Fav_" + p.Id, true);
+
+                
+                DisplayAlert("Success", $"Added '{p.projectName}' to favourites", "OK");
+            }
+        }
+
+       
+        private async void OnProjectSelected(object sender, SelectionChangedEventArgs e)
+        {
+            if (e.CurrentSelection.FirstOrDefault() is Project selectedProject)
+            {
+                // Navigate to AddExpensePage for the selected project
+                await Navigation.PushAsync(new AddExpensePage(selectedProject));
+
+                // Clear the selection so the row doesn't stay highlighted
+                ((CollectionView)sender).SelectedItem = null;
+            }
+        }
+    }
+}

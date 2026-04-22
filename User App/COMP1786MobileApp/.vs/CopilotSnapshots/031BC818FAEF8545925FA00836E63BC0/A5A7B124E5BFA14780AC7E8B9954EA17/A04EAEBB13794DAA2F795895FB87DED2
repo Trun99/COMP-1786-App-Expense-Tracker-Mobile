@@ -1,0 +1,53 @@
+﻿using COMP1786MobileApp.Models;
+using COMP1786MobileApp.Services;
+using System;
+using System.Linq;
+using System.Threading.Tasks;
+
+namespace COMP1786MobileApp
+{
+    public partial class AddExpensePage : ContentPage
+    {
+        private readonly FirebaseService _service = new FirebaseService();
+        private readonly Project _project;
+
+        public AddExpensePage(Project project)
+        {
+            InitializeComponent();
+            _project = project;
+            ProjectNameLabel.Text = project?.projectName ?? "(No project)";
+            ExpenseDatePicker.Date = DateTime.Today;
+        }
+
+        private async void OnSaveClicked(object sender, EventArgs e)
+        {
+            if (!double.TryParse(AmountEntry.Text, out var amount))
+            {
+                await DisplayAlert("Error", "Số tiền không hợp lệ.", "OK");
+                return;
+            }
+
+            var expense = new Expense
+            {
+                ProjectId = _project?.Id,
+                Amount = amount,
+                Date = ExpenseDatePicker.Date.GetValueOrDefault(),
+                Type = TypePicker.SelectedItem?.ToString(),
+                PaymentMethod = MethodPicker.SelectedItem?.ToString(),
+                Claimant = ClaimantEntry.Text,
+                Description = DescriptionEditor.Text
+            };
+
+            try
+            {
+                await _service.AddExpenseAsync(expense);
+                await DisplayAlert("Success", "Expense saved to cloud.", "OK");
+                await Navigation.PopAsync();
+            }
+            catch (Exception ex)
+            {
+                await DisplayAlert("Error", "Failed to save: " + ex.Message, "OK");
+            }
+        }
+    }
+}

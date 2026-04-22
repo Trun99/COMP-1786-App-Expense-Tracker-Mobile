@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="COMP1786MobileApp.ProjectExpensesPage"
+             Title="Project Expenses">
+
+    <VerticalStackLayout Padding="15" Spacing="10">
+        <Label x:Name="projectTitleLabel" FontSize="20" FontAttributes="Bold" />
+        <Label x:Name="projectInfoLabel" FontSize="12" TextColor="Gray" />
+
+        <Button Text="Add Expense"
+                Clicked="OnAddExpenseClicked"
+                BackgroundColor="#2E7D32"
+                TextColor="White" />
+
+        <CollectionView x:Name="expenseList"
+                        SelectionMode="Single"
+                        SelectionChanged="OnExpenseSelected">
+            <CollectionView.EmptyView>
+                <Label Text="No expenses yet for this project."
+                       HorizontalTextAlignment="Center"
+                       Margin="0,20,0,0" />
+            </CollectionView.EmptyView>
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Frame Margin="0,5" Padding="10" BackgroundColor="White" CornerRadius="10" HasShadow="True">
+                        <VerticalStackLayout Spacing="3">
+                            <Label Text="{Binding Type}" FontAttributes="Bold" />
+                            <Label Text="{Binding Amount, StringFormat='Amount: {0:F2}'}" />
+                            <Label Text="{Binding Currency, StringFormat='Currency: {0}'}" />
+                            <Label Text="{Binding Date, StringFormat='Date: {0:yyyy-MM-dd}'}" />
+                            <Label Text="{Binding Claimant, StringFormat='Claimant: {0}'}" />
+                            <Label Text="{Binding PaymentStatus, StringFormat='Status: {0}'}" />
+                            <Label Text="Tap to view full expense details"
+                                   FontSize="11"
+                                   TextColor="#2E7D32" />
+                        </VerticalStackLayout>
+                    </Frame>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </VerticalStackLayout>
+
+</ContentPage>
